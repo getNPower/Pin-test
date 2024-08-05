@@ -1,18 +1,11 @@
+<script setup>
+import ListComponent from '@/components/ListComponent.vue'
+
+// This is a mock data
+const itemsData = ['Item 1', 'Item 2', 'Item 3', 'Item 4']
+</script>
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <ListComponent :items="itemsData" />
   </div>
 </template>
-
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
-</script>
