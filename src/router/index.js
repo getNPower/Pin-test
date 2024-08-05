@@ -10,17 +10,17 @@ const routes = [
   {
     path: '/form',
     name: 'form',
-    component: () => import(/* webpackChunkName: "about" */ '../views/FormView.vue')
+    component: () => import(/* webpackChunkName: "form" */ '../views/FormView.vue')
   },
   {
     path: '/api',
     name: 'api',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ApiView.vue')
+    component: () => import(/* webpackChunkName: "api" */ '../views/ApiView.vue')
   },
   {
     path: '/teleport',
     name: 'teleport',
-    component: () => import(/* webpackChunkName: "about" */ '../views/TeleportView.vue')
+    component: () => import(/* webpackChunkName: "teleport" */ '../views/TeleportView.vue')
   }
 ]
 

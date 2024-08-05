@@ -11,12 +11,12 @@ export default {
 
     el.addEventListener('click', clickHandler)
 
-    // Збереження обробника події в DOM елементі
+    // Storing the event handler in a DOM element
     el.__clickHandler__ = clickHandler
   },
   beforeUnmount (el) {
-    // Видалення обробника події перед видаленням компонента
+    // Removing the event handler before the component is removed
     el.removeEventListener('click', el.__clickHandler__)
-    delete el.__clickHandler__ // Видалення посилання на обробник
+    delete el.__clickHandler__
   }
 }

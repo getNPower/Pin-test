@@ -20,9 +20,17 @@ watch(() => props.show, (newVal) => {
 
 <template>
   <teleport to="body">
-    <div v-if="isVisible" class="modal-overlay">
+    <div
+      v-if="isVisible"
+      class="modal-overlay"
+    >
       <div class="modal-content">
-        <button @click="close" class="modal-close-button">Close</button>
+        <button
+          @click="close"
+          class="modal-close-button"
+        >
+          Close
+        </button>
         <slot></slot>
       </div>
     </div>

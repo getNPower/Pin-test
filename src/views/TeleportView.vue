@@ -12,7 +12,10 @@ const openModal = () => {
 <template>
   <div>
     <button @click="openModal">Open Modal</button>
-    <Modal :show="isModalVisible" @update:show="isModalVisible = $event">
+    <Modal
+      :show="isModalVisible"
+      @update:show="isModalVisible = $event"
+    >
       <p>This is a modal content!</p>
     </Modal>
   </div>

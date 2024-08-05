@@ -40,26 +40,85 @@ const submitForm = () => {
 </script>
 
 <template>
-  <form @submit.prevent="submitForm" class="form">
+  <form
+    @submit.prevent="submitForm"
+    class="form"
+  >
     <div class="form-group">
-      <label for="name" class="form-label">Name:</label>
-      <input type="text" id="name" v-model="form.name" @input="validateName" @blur="validateName" class="form-input"/>
-      <p v-if="errors.name" class="error">{{ errors.name }}</p>
+      <label
+        for="name"
+        class="form-label"
+      >
+        Name:
+      </label>
+      <input
+        id="name"
+        type="text"
+        v-model="form.name"
+        @input="validateName"
+        @blur="validateName"
+        class="form-input"
+      />
+      <p
+        v-if="errors.name"
+        class="error"
+      >
+        {{ errors.name }}
+      </p>
     </div>
 
     <div class="form-group">
-      <label for="email" class="form-label">Email:</label>
-      <input type="email" id="email" v-model="form.email" @input="validateEmail" @blur="validateEmail" class="form-input"/>
-      <p v-if="errors.email" class="error">{{ errors.email }}</p>
+      <label
+        for="email"
+        class="form-label"
+      >
+        Email:
+      </label>
+      <input
+        id="email"
+        type="email"
+        v-model="form.email"
+        @input="validateEmail"
+        @blur="validateEmail"
+        class="form-input"
+      />
+      <p
+        v-if="errors.email"
+        class="error"
+      >
+        {{ errors.email }}
+      </p>
     </div>
 
     <div class="form-group">
-      <label for="password" class="form-label">Password:</label>
-      <input type="password" id="password" v-model="form.password" @input="validatePassword" @blur="validatePassword" class="form-input"/>
-      <p v-if="errors.password" class="error">{{ errors.password }}</p>
+      <label
+        for="password"
+        class="form-label"
+      >
+        Password:
+      </label>
+      <input
+        id="password"
+        type="password"
+        v-model="form.password"
+        @input="validatePassword"
+        @blur="validatePassword"
+        class="form-input"/>
+      <p
+        v-if="errors.password"
+        class="error"
+      >
+        {{ errors.password }}
+      </p>
     </div>
 
-    <button type="submit" class="form-button" :disabled="!isValidForm">Submit</button>
+    <button
+      type="submit"
+      :disabled="!isValidForm"
+      class="form-button"
+    >
+      Submit
+    </button>
   </form>
 </template>
 
@@ -71,17 +130,17 @@ const submitForm = () => {
   margin: 2rem auto;
   border-radius: 4px;
 
-  .form-group {
+  &-group {
     margin-bottom: 1rem;
   }
 
-  .form-label {
+  &-label {
     display: inline-block;
     margin-bottom: .5rem;
     font-size: 1.2em;
   }
 
-  .form-input {
+  &-input {
     display: block;
     width: 100%;
     padding: .5rem 1rem;
@@ -97,7 +156,7 @@ const submitForm = () => {
     }
   }
 
-  .form-button {
+  &-button {
     display: block;
     width: 100%;
     padding: .5rem 2rem;
