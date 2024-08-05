@@ -22,6 +22,7 @@ const hasItems = computed(() => items.value.length > 0)
         v-for="(item, index) in items"
         :key="index"
         class="list-group__item"
+        v-toggle-bg
       >
         {{ item }}
       </li>

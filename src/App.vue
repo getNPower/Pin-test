@@ -1,7 +1,9 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/form">Form</router-link>
+    <router-link to="/form">Form</router-link> |
+    <router-link to="/api">Api</router-link> |
+    <router-link to="/teleport">Teleport</router-link>
   </nav>
   <router-view/>
 </template>
